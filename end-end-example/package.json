@@ -1,0 +1,27 @@
+{
+  "name": "end-end-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b --verbose",
+    "clean": "rm -rf build/*",
+    "prepare": "npx eventual generate src/domain.md --output src/domain-events.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+
+  "dependencies": {
+    "@eventual/runtime": "^0.1.0",
+    "@types/fs-extra": "^9.0.1",
+    "ts-jest": "^26.3.0",
+    "typescript": "^3.8"
+  },
+  "devDependencies": {
+    "@eventual/cli": "^0.1.2",
+    "@types/fs-extra": "^9.0.1",
+    "ts-jest": "^26.3.0",
+    "typescript": "^3.8"
+  }
+}

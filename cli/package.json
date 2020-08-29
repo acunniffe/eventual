@@ -1,7 +1,7 @@
 {
   "name": "@eventual/cli",
   "scope": "@eventual",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "dependencies": {
     "ajv": "^6.12.4",
     "colors": "^1.4.0",
@@ -26,7 +26,8 @@
   "scripts": {
     "build": "tsc -b --verbose",
     "clean": "rm -rf build/*",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "cp ../README.md README.md && yarn run build"
   },
   "files": ["lib/"],
   "main": "lib/index.js",

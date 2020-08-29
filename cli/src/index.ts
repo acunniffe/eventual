@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { extractRawTagsFromMarkdown, ITagParseResult } from './Parser';
 
 const { program } = require('commander');

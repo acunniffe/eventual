@@ -4,3 +4,4 @@ node_modules
 .local-optic-core
 /cli/lib/**
 /runtime/lib/**
+/end-end-example/lib/**

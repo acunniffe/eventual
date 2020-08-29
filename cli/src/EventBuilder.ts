@@ -117,26 +117,6 @@ export interface IMetaSentenceParse {
   sentenceRaw: string;
 }
 
-// /// Generator
-// export function generateCodeTo(outputPathProvided: string) {
-//   const resolvedOutputPath = path.join(outputPathProvided);
-//   const lockPath = path.join(resolvedOutputPath, '.lock.json');
-//   console.log('lock at: ' + lockPath);
-//   const outputPath = path.join(resolvedOutputPath);
-//   const lockFile = getLockFile(lockPath);
-//   if (lockFile) {
-//     const updatedEventDefinitions = updateEventNamesFromLockFile(
-//       __DefinedEvents,
-//       lockFile
-//     );
-//     const newLockFile = checkLockFile(updatedEventDefinitions, lockFile);
-//
-//     saveLockFile(newLockFile, lockPath);
-//   } else {
-//     saveLockFile(generateLockFile(__DefinedEvents), lockPath);
-//   }
-// }
-
 // utils
 function useStringPolyfills() {
   //@ts-ignore

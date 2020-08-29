@@ -33,13 +33,13 @@ export default class EventualEventType<T> implements IEventualEventType {
     if (this.validate(props)) {
       return {
         type: this.eventName,
-        data: props,
+        properties: props,
         toSentence: () =>
           this._toSentence(new Proxy(props, variableNameEchoProxy(props))),
         toJson: () => {
           return {
             type: this.eventName,
-            data: props,
+            properties: props,
           };
         },
       };
@@ -63,7 +63,7 @@ export interface IEventualEventType {
 
 export interface IEventualEvent<T> {
   type: string;
-  data: T;
+  properties: T;
   toSentence: () => string;
   toJson(): any;
 }

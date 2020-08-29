@@ -61,7 +61,8 @@ function assertNoNonDraftRemovals(
   const removedProds = result.filter((i) => !i.isDraft);
   if (removedProds.length > 0) {
     throw new Error(
-      'You can not remove published events...ever! ' + removedProds.join(', ')
+      'You can not remove published events...ever! ' +
+        JSON.stringify(removedProds.join(', '))
     );
   }
 }
@@ -74,8 +75,12 @@ function assertNoSchemaChanges(
     const baseSchema = baseLockfile[lockKey].schema;
     const headSchema = headLockfile[lockKey].schema;
 
-    if (!deepEqual(baseSchema, headSchema)) {
-      throw new Error(`Schema for ${lockKey} has changed! This is not allowed`);
+    if (!baseSchema.isDraft) {
+      if (!deepEqual(baseSchema, headSchema)) {
+        throw new Error(
+          `Schema for ${lockKey} has changed! This is not allowed`
+        );
+      }
     }
   });
 }

@@ -23,9 +23,6 @@ export function extractRawTagsFromMarkdown(
     const rawJson = match[4] ? match[4].trim() : undefined;
     const parsedJson = niceTry(() => jsonic(rawJson));
 
-    console.log(rawJson);
-    console.log(parsedJson);
-
     const line =
       Array.from(fileContents.substring(0, match.index!)).filter(
         (i) => i === '\n'

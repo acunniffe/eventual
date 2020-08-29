@@ -1,0 +1,54 @@
+{
+ "USERS-1": {
+  "eventName": "AUserWithEmailAndUserIdWasCreated",
+  "isDraft": false,
+  "schema": {
+   "additionalProperties": false,
+   "properties": {
+    "email": {
+     "type": "string"
+    },
+    "userId": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "email",
+    "userId"
+   ],
+   "type": "object"
+  }
+ },
+ "USERS-2": {
+  "eventName": "UserUserIdVerifiedTheirEmail",
+  "isDraft": false,
+  "schema": {
+   "additionalProperties": false,
+   "properties": {
+    "userId": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "userId"
+   ],
+   "type": "object"
+  }
+ },
+ "USERS-3": {
+  "eventName": "UserUserIdDeletedTheirAccount",
+  "isDraft": true,
+  "schema": {
+   "additionalProperties": false,
+   "properties": {
+    "userId": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "userId"
+   ],
+   "type": "object"
+  }
+ }
+}
