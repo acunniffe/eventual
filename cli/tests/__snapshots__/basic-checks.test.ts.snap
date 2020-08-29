@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom schemas fail when they are invalid json 1`] = `"Invalid JSON provided as custom schema to USER-1 at Line(7) /Users/aidancunniffe/Developer/eventual/tests/examples/domain.md"`;
+
+exports[`custom schemas fail when they do not include required fields 1`] = `
+"Schema must have properties for all variables in the sentence USER-1 at Line(7) /Users/aidancunniffe/Developer/eventual/tests/examples/domain.md 
+{\\"type\\":\\"object\\",\\"required\\":[\\"email\\"],\\"additionalProperties\\":false,\\"properties\\":{\\"userId\\":{\\"type\\":\\"string\\"}}}"
+`;
+
+exports[`finds a duplicate tags when there is one 1`] = `
+Array [
+  "USER-1",
+]
+`;
+
+exports[`finds no duplicate tags when there are none 1`] = `Array []`;

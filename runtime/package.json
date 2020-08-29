@@ -1,0 +1,19 @@
+{
+  "name": "eventual",
+  "version": "0.1.0",
+  "dependencies": {
+    "ajv": "^6.12.4",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "typescript": "^3.8",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0"
+  },
+  "scripts": {
+    "build": "tsc -b --verbose",
+    "clean": "rm -rf build/*",
+    "test": "jest"
+  }
+}

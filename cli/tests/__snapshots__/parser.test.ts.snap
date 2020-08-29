@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can build executable toSentence from raw 1`] = `
+Object {
+  "templateString": "A #user with \${email} and \${userId} was created.",
+  "variables": Array [
+    "email",
+    "userId",
+  ],
+}
+`;
+
+exports[`can extract eventual tags from markdown 1`] = `
+Array [
+  Object {
+    "eventBuilder": Object {
+      "eventName": "AUserWithEmailAndUserIdWasCreated",
+      "filePath": "example-file.js",
+      "isDraft": false,
+      "line": 8,
+      "lockKey": "USER-1",
+      "rawSentence": "A #user with $email and $userId was created.",
+      "schema": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "email": Object {
+            "type": "string",
+          },
+          "userId": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "email",
+          "userId",
+        ],
+        "type": "object",
+      },
+      "tags": Array [
+        "user",
+      ],
+      "toSentenceCode": "({email, userId}) => \`A #user with \${email} and \${userId} was created.\`",
+    },
+    "filePath": "example-file.js",
+    "isDraft": false,
+    "line": 8,
+    "lockKey": "USER-1",
+    "rawSentence": "A #user with $email and $userId was created.",
+  },
+  Object {
+    "eventBuilder": Object {
+      "eventName": "UserUserIdVerifiedTheirEmail",
+      "filePath": "example-file.js",
+      "isDraft": false,
+      "line": 9,
+      "lockKey": "USER-2",
+      "rawSentence": "#user $userId verified their email",
+      "schema": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "userId": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "userId",
+        ],
+        "type": "object",
+      },
+      "tags": Array [
+        "user",
+      ],
+      "toSentenceCode": "({userId}) => \`#user \${userId} verified their email\`",
+    },
+    "filePath": "example-file.js",
+    "isDraft": false,
+    "line": 9,
+    "lockKey": "USER-2",
+    "rawSentence": "#user $userId verified their email",
+  },
+  Object {
+    "eventBuilder": Object {
+      "eventName": "UserUserIdDeletedTheirAccount",
+      "filePath": "example-file.js",
+      "isDraft": true,
+      "line": 10,
+      "lockKey": "USER-3",
+      "rawSentence": "#user $userId deleted their account",
+      "schema": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "userId": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "userId",
+        ],
+        "type": "object",
+      },
+      "tags": Array [
+        "user",
+      ],
+      "toSentenceCode": "({userId}) => \`#user \${userId} deleted their account\`",
+    },
+    "filePath": "example-file.js",
+    "isDraft": true,
+    "line": 10,
+    "lockKey": "USER-3",
+    "rawSentence": "#user $userId deleted their account",
+  },
+]
+`;

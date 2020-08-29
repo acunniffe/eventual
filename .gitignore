@@ -1,0 +1,6 @@
+.idea
+node_modules
+.env
+.local-optic-core
+/cli/lib/**
+/runtime/lib/**

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can generate a declaration file from Events 1`] = `
+"import EventualEventType from \\"@eventual/runtime\\"
+
+// [api,user] An #api with $id was created by #user $userId
+// source: (Line 15) example-file
+export interface IAnApiWithIdWasCreatedByUserUserId {
+  id: string
+  userId: string
+}
+
+export const AnApiWithIdWasCreatedByUserUserId = new EventualEventType<
+  IAnApiWithIdWasCreatedByUserUserId
+>(
+  \\"AnApiWithIdWasCreatedByUserUserId\\",
+  ({ id, userId }) => \`An #api with \${id} was created by #user \${userId}\`,
+  {
+    type: \\"object\\",
+    required: [\\"id\\", \\"userId\\"],
+    additionalProperties: false,
+    properties: { id: { type: \\"string\\" }, userId: { type: \\"string\\" } },
+  },
+  [\\"api\\", \\"user\\"],
+  \\"ORG-1\\"
+)
+
+//////////////////////////////////////////////////////////
+
+// [api] The #api $id was deprecated
+// source: (Line 15) example-file
+export interface ITheApiIdWasDeprecated {
+  id: string
+}
+
+export const TheApiIdWasDeprecated = new EventualEventType<
+  ITheApiIdWasDeprecated
+>(
+  \\"TheApiIdWasDeprecated\\",
+  ({ id }) => \`The #api \${id} was deprecated\`,
+  {
+    type: \\"object\\",
+    required: [\\"id\\"],
+    additionalProperties: false,
+    properties: { id: { type: \\"string\\" } },
+  },
+  [\\"api\\"],
+  \\"ORG-2\\"
+)
+
+//////////////////////////////////////////////////////////
+"
+`;
+
+exports[`can generate a declaration file from Events. user events 1`] = `
+"import EventualEventType from \\"@eventual/runtime\\"
+
+// [api,user] An #api with $id was created by #user $userId
+// source: (Line 15) example-file
+export interface IAnApiWithIdWasCreatedByUserUserId {
+  id: string
+  userId: string
+}
+
+export const AnApiWithIdWasCreatedByUserUserId = new EventualEventType<
+  IAnApiWithIdWasCreatedByUserUserId
+>(
+  \\"AnApiWithIdWasCreatedByUserUserId\\",
+  ({ id, userId }) => \`An #api with \${id} was created by #user \${userId}\`,
+  {
+    type: \\"object\\",
+    required: [\\"id\\", \\"userId\\"],
+    additionalProperties: false,
+    properties: { id: { type: \\"string\\" }, userId: { type: \\"string\\" } },
+  },
+  [\\"api\\", \\"user\\"],
+  \\"ORG-1\\"
+)
+
+//////////////////////////////////////////////////////////
+
+// [api] The #api $id was deprecated
+// source: (Line 15) example-file
+export interface ITheApiIdWasDeprecated {
+  id: string
+}
+
+export const TheApiIdWasDeprecated = new EventualEventType<
+  ITheApiIdWasDeprecated
+>(
+  \\"TheApiIdWasDeprecated\\",
+  ({ id }) => \`The #api \${id} was deprecated\`,
+  {
+    type: \\"object\\",
+    required: [\\"id\\"],
+    additionalProperties: false,
+    properties: { id: { type: \\"string\\" } },
+  },
+  [\\"api\\"],
+  \\"ORG-2\\"
+)
+
+//////////////////////////////////////////////////////////
+"
+`;
+
+exports[`can generate declaration code from Event 1`] = `Promise {}`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`runtime events can be created with valid props 1`] = `"A #user with $email [1m[4ma@gmail.com[24m[22m and $id [1m[4mabcdefg[24m[22m signed-up"`;
+
+exports[`runtime events can be created with valid props 2`] = `
+Object {
+  "data": Object {
+    "email": "a@gmail.com",
+    "id": "abcdefg",
+  },
+  "type": "AUserWithEmailAndIdSignedUp",
+}
+`;
+
+exports[`runtime events will throw is created with wrong data 1`] = `"Invalid props for Event Type AUserWithEmailAndIdSignedUp"`;

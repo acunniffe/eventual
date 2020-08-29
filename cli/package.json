@@ -1,0 +1,36 @@
+{
+  "name": "@eventual/cli",
+  "scope": "@eventual",
+  "version": "0.1.0",
+  "dependencies": {
+    "ajv": "^6.12.4",
+    "colors": "^1.4.0",
+    "commander": "^6.1.0",
+    "deep-equal": "^2.0.3",
+    "fs-extra": "^9.0.1",
+    "jest": "^26.4.2",
+    "json-schema-to-typescript": "^9.1.1",
+    "json-stable-stringify": "^1.0.1",
+    "jsonic": "^0.3.1",
+    "lodash.flatten": "^4.4.0",
+    "lodash.groupby": "^4.6.0",
+    "nice-try": "^2.0.1",
+    "pascalcase": "^1.0.0",
+    "string.prototype.matchall": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "ts-jest": "^26.3.0",
+    "typescript": "^3.8"
+  },
+  "scripts": {
+    "build": "tsc -b --verbose",
+    "clean": "rm -rf build/*",
+    "test": "jest"
+  },
+  "files": ["lib/"],
+  "main": "lib/index.js",
+  "bin": {
+    "eventual": "lib/index.js"
+  }
+}

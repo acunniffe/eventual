@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`error when a schema is changed 1`] = `"Schema for ORG-1 has changed! This is not allowed"`;
+
+exports[`key comparison empty when some intersect 1`] = `
+Object {
+  "added": Array [],
+  "intersect": Array [
+    "a",
+  ],
+  "removed": Array [],
+}
+`;
+
+exports[`key comparison has one added, when one added 1`] = `
+Object {
+  "added": Array [
+    "b",
+  ],
+  "intersect": Array [
+    "a",
+  ],
+  "removed": Array [],
+}
+`;
+
+exports[`key comparison when one removed 1`] = `
+Object {
+  "added": Array [],
+  "intersect": Array [],
+  "removed": Array [
+    "a",
+  ],
+}
+`;
